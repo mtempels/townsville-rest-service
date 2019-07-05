@@ -1,0 +1,43 @@
+{
+  "name": "townsville-rest-service",
+  "version": "0.0.1",
+  "description": "Townsville Rest Service for Datacommunication",
+  "private": true,
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtempels/townsville-rest-service.git"
+  },
+  "author": "Matthijs Tempels <matthijs@townsville.nl>",
+  "license": "Copyright Townsville.nl",
+  "preferGlobal": true,
+  "bin": {
+    "townsville-rest-service": "index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/mtempels/townsville-rest-service/issues"
+  },
+  "homepage": "https://github.com/mtempels/townsville-rest-service#readme",
+  "dependencies": {
+    "async": "2.6.1",
+    "basic-auth": "2.0.1",
+    "townsville-logger": "github:mtempels/townsville-logger",
+    "decache": "^4.5.0",
+    "moment": "^2.23.0",
+    "nconf": "0.10.0"
+  },
+  "bundledDependencies": [
+    "townsville-logger",
+    "moment",
+    "nconf",
+    "async",
+    "basic-auth"
+  ],
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "test": "mocha test",
+    "setup": "scripts/setup.sh"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "serviceSettings": {
+    "jsonRest": {
+      "host": "0.0.0.0",
+      "port": 8080,
+      "serverType": "http",
+      "exposeCause": true,
+      "key": "certs/privkey.pem",
+      "cert": "certs/fullchain.pem",
+      "ca": "certs/chain.pem",
+      "requestCert": false,
+      "rejectUnauthorized": true,
+      "auth": {
+        "realm": "CustomerRestService",
+        "description": "user=test1, password=test1 / user=test2, password=test2",
+        "passwdMethod" : "echo -n '<realm><username><password>' | sha1sum -> echo 'CustomerRestServicetest1test1' | sha1sum",
+        "users": {
+          "test1": "a8375bed63a45af8e0790168cf8bfb9ce786f2c3",
+          "test2": "343eece89c2d13fa848ef0d69e64f9dace87beef"
+        }
+      }
+    },
+    "routes": [{
+      "name": "Townsville Test Route 1",
+      "validUsers": [
+        "test1"
+      ],
+      "route": "/townsville/test/1/",
+      "action": "test-1",
+      "parameters": [{
+        "path": "/tmp/1/"
+      }]
+    }, {
+      "name": "Townsville Test Route 2",
+      "validUsers": [
+        "test2"
+      ],
+      "route": "/townsville/test/2/",
+      "action": "test-2",
+      "parameters": [{
+        "path": "/tmp/2/"
+      }]
+    }]
+  },
+
+  "logSettings": {
+    "name": "townsville-rest-service",
+    "showName": true,
+    "level": "debug",
+    "levels": {
+      "json-rest-server": "debug"
+    },
+    "console": {
+      "colorize": true
+    },
+    "file": {
+      "path": "/tmp/townsville-rest-service.log",
+      "rollingFile": {
+        "maxSize": 10000000,
+        "maxFiles": 20
+      }
+    },
+    "_syslog": {
+      "_host": "localhost",
+      "_port": 514
+    }
+  }
+}
