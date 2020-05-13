@@ -33,11 +33,11 @@
     "async",
     "basic-auth"
   ],
-  "devDependencies": {
-    "mocha": "^5.2.0"
-  },
   "scripts": {
     "test": "mocha test",
     "setup": "scripts/setup.sh"
+  },
+  "devDependencies": {
+    "mocha": "^7.1.2"
   }
 }
