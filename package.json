@@ -23,7 +23,7 @@
     "basic-auth": "2.0.1",
     "townsville-logger": "github:mtempels/townsville-logger",
     "decache": "^4.5.0",
-    "moment": "^2.23.0",
+    "moment": "^2.29.2",
     "nconf": "0.10.0"
   },
   "bundledDependencies": [
