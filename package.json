@@ -24,7 +24,7 @@
     "townsville-logger": "github:mtempels/townsville-logger",
     "decache": "^4.5.0",
     "moment": "^2.23.0",
-    "nconf": "0.10.0"
+    "nconf": "0.11.4"
   },
   "bundledDependencies": [
     "townsville-logger",
