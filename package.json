@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/mtempels/townsville-rest-service#readme",
   "dependencies": {
-    "async": "2.6.1",
+    "async": "2.6.4",
     "basic-auth": "2.0.1",
     "townsville-logger": "github:mtempels/townsville-logger",
     "decache": "^4.5.0",
