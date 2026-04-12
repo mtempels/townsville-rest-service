@@ -19,12 +19,12 @@
   },
   "homepage": "https://github.com/mtempels/townsville-rest-service#readme",
   "dependencies": {
-    "async": "2.6.1",
-    "basic-auth": "2.0.1",
+    "async": "^3.2.6",
+    "basic-auth": "^2.0.1",
     "townsville-logger": "github:mtempels/townsville-logger",
-    "decache": "^4.5.0",
-    "moment": "^2.23.0",
-    "nconf": "0.10.0"
+    "decache": "^4.6.2",
+    "moment": "^2.30.1",
+    "nconf": "^0.13.0"
   },
   "bundledDependencies": [
     "townsville-logger",
@@ -38,6 +38,6 @@
     "setup": "scripts/setup.sh"
   },
   "devDependencies": {
-    "mocha": "^7.1.2"
+    "mocha": "^11.7.5"
   }
 }
